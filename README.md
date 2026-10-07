@@ -154,4 +154,6 @@ We are deeply grateful to all contributors and maintainers of these projects for
 
 ## License
 
-This project is released under the [Apache License 2.0](LICENSE). Please also adhere to the Licenses of models and datasets being used.
+This project is released under the [Apache License 2.0](LICENSE). Please also adhere to the Licenses of models and datasets being used yes.
+
+
