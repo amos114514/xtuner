@@ -296,7 +296,7 @@ jobs:
             ```
           claude_args: |
               --max-turns ${{ env.CLAUDE_REVIEW_ANALYSIS_MAX_TURNS }}
-              --model opus
+              --model claude-sonnet-4-6
               --tools "Read,Edit,Grep,Glob,Bash,WebSearch,WebFetch"
               --disallowedTools "Agent,mcp__github_inline_comment__create_inline_comment"
               --allowedTools "
@@ -384,7 +384,7 @@ jobs:
           claude_args: |
               --resume ${{ steps.claude-review-session.outputs.session_id }}
               --max-turns ${{ env.CLAUDE_REVIEW_SUMMARY_MAX_TURNS }}
-              --model opus
+              --model claude-sonnet-4-6
               --json-schema '{"type":"object","properties":{"summary":{"type":"string","minLength":1}},"required":["summary"],"additionalProperties":false}'
               --tools "StructuredOutput"
           # Hidden Action coupling: a non-empty value installs the bubblewrap/socat subprocess-isolation dependencies.
@@ -435,7 +435,7 @@ jobs:
           claude_args: |
               --resume ${{ steps.claude-review-session.outputs.session_id }}
               --max-turns ${{ env.CLAUDE_REVIEW_INLINE_MAX_TURNS }}
-              --model opus
+              --model claude-sonnet-4-6
               --tools "Read"
               --disallowedTools "Agent"
               --allowedTools "
@@ -592,7 +592,7 @@ jobs:
 
           claude_args: |
               --max-turns ${{ env.CLAUDE_COMMENT_MAX_TURNS }}
-              --model opus
+              --model claude-sonnet-4-6
               --allowedTools "
                 Read,Write,Edit,MultiEdit,LS,Grep,Glob,Agent,WebSearch,WebFetch,
                 Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(rg:*),
